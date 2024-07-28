@@ -6,9 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/videos/<path:filename>')
-def video(filename):
-    return send_from_directory('videos', filename)
+@app.route('/assets/<path:filename>')
+def asset(filename):
+    return send_from_directory('assets', filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
